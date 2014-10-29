@@ -1,0 +1,18 @@
+{
+    "displayName": "trigger.task.name",
+    "moduleName": "${project.artifactId}",
+    "moduleVersion": "${parsedVersion.osgiVersion}",
+    "triggerTaskEvents" : [
+        {
+            "subject" : "trigger",
+            "displayName" : "trigger.task.name",
+            "eventParameters" : [
+                {
+                    "eventKey" : "params",
+                    "type" : "MAP",
+                    "displayName" : "trigger.task.params"
+                }
+            ]
+        }
+    ]
+}
