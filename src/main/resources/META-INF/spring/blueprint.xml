@@ -16,6 +16,15 @@
     <context:annotation-config/>
     <context:component-scan base-package="org.motechproject.trigger"/>
 
+    <bean id="moduleRegistrationData" class="org.motechproject.osgi.web.ModuleRegistrationData">
+        <constructor-arg name="moduleName" value="trigger" />
+        <constructor-arg name="i18n">
+            <map>
+                <entry key="messages" value="../trigger/resources/messages/" />
+            </map>
+        </constructor-arg>
+    </bean>
+
     <osgi:service ref="triggerService" interface="org.motechproject.trigger.service.TriggerService" />
 
     <osgi:reference id="eventRelay" interface="org.motechproject.event.listener.EventRelay"/>
